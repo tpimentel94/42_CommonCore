@@ -1,7 +1,8 @@
 NAME = libft.a
 
 SRC = ft_isalpha.c \
-	ft_isdigit.c \
+	ft_isalnum.c \
+#	ft_isdigit.c \
 	ft_isalnum.c \
 	ft_isascii.c \
 	ft_isprint.c \
@@ -37,21 +38,22 @@ SRC = ft_isalpha.c \
 
 
 OBJ = ${SRC:.c=.o}
-BONUS_OBJ = ${BONUS:.c=.o}	
+
 CFLAGS = -Wall -Werror -Wextra
 LIBC = ar rcs
 RM = rm -f
+CC = cc
+
+%.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@ 
 
 all: ${NAME}
 
 ${NAME}: ${OBJ}
 	${LIBC} ${NAME} ${OBJ}
 
-bonus:  ${NAME} ${BONUS_OBJ}
-		${LIBC} ${NAME} ${BONUS_OBJ}
-
 clean: 
-	${RM} ${OBJ} ${BONUS_OBJ}
+	${RM} ${OBJ}
 
 fclean: clean
 	${RM} ${NAME}

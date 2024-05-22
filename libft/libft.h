@@ -6,7 +6,7 @@
 /*   By: tlopes-p <tlopes-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/16 20:04:51 by tlopes-p          #+#    #+#             */
-/*   Updated: 2024/05/16 20:15:42 by tlopes-p         ###   ########.fr       */
+/*   Updated: 2024/05/22 17:59:19 by tlopes-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,13 @@
 # include <unistd.h>
 # include <string.h>
 
-// libc functions
+int					ft_isalnum(int str);
 int					ft_isalpha(int a);
+
+// libc functions
+/*int					ft_isalpha(int a);
 int					ft_isdigit(int a);
-int					ft_isalnum(int a);
+int					ft_isalnum(int str);
 int					ft_isascii(int a);
 int					ft_isprint(int a);
 size_t				ft_strlen(const char *str);
@@ -56,6 +59,6 @@ void				ft_striteri(char *s, void (*f)(unsigned int, char *));
 void				ft_putchar_fd(char c, int fd);
 void				ft_putstr_fd(char *s, int fd);
 void				ft_putendl_fd(char *s, int fd);
-void				ft_putnbr_fd(int n, int fd);
+void				ft_putnbr_fd(int n, int fd);*/
 
 #endif

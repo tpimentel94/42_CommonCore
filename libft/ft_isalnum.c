@@ -6,43 +6,27 @@
 /*   By: tlopes-p <tlopes-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/16 20:07:57 by tlopes-p          #+#    #+#             */
-/*   Updated: 2024/05/16 20:59:35 by tlopes-p         ###   ########.fr       */
+/*   Updated: 2024/05/22 17:59:48 by tlopes-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalpha(char *str)
+int	ft_isalnum(int str)
 {
-	int	i;
-
-	i = 0;
-	if (!*str)
-	{
+	if ((str >= 'A' && str <= 'Z') || 
+			(str >= 'a' && str <= 'z') ||
+			(str >= '0' && str <= '9'))
 		return (1);
-	}
-	while (str[i] != '\0')
-	{
-		if ((str[i] >= 'A' && str[i] <= 'Z') || 
-			(str[i] >= 'a' && str[i] <= 'z') ||
-			(str[i] >= '0' && str[i] <= '9'))
-		{
-			i++;
-		}
-		else
-		{
-			return (0);
-		}
-	}
-	return (1);
+	return (0);
 }
 /*
 int	main(void)
 {
 	int	n, y;
 
-	n = ft_isalpha("ok1ok");
-	y = ft_isalpha("justalpha");
+	n = ft_isalnum("-");
+	y = ft_isalnum("8");
 	
 	printf("Negative test: %d\n", n);
 	printf("Positive test: %d\n", y);
