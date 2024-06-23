@@ -12,10 +12,6 @@
 
 #include "libft.h"
 
-// allocates memory for an array of nmeb of size bytes
-// returns pointer to the allocated memory
-// sets memory to zero
-
 void	*ft_calloc(size_t nmeb, size_t size)
 {
 	void	*ptr;

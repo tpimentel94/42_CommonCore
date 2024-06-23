@@ -27,7 +27,8 @@ void    *memcpy(void *dest, const void *src, size_t n)
 	return (dest);
 }
 
-/*int main(void)
+/*
+int main(void)
 {
 		char src[10] = "123456789";
 		char dest[3] = "ola";
@@ -37,4 +38,5 @@ void    *memcpy(void *dest, const void *src, size_t n)
 
 		printf("%s\n", test);
 		printf("%s", test2);
-}*/
+}
+*/

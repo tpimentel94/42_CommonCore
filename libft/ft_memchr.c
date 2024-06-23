@@ -12,9 +12,6 @@
 
 #include "libft.h"
 
-// searches for the character c in the first n bytes of the string
-// pointed by str
-// returns the string after its first ocurrence
 
 void    *ft_memchr(const void *str, int c, size_t n)
 {
@@ -32,6 +29,7 @@ void    *ft_memchr(const void *str, int c, size_t n)
     return (NULL);
 }
 
+/*
 int main(void)
 {
 		char s[] = "Hello.world";
@@ -43,3 +41,4 @@ int main(void)
 		printf("%s\n", str);
 		printf("%s\n", str2);
 }
+*/

@@ -12,9 +12,6 @@
 
 #include "libft.h"
 
-// copies n characters from src to dest, from one memory area to another
-// if the destination string is smaller, the src will be copyied
-// backwards, so it doenst overlapp
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
@@ -42,7 +39,8 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	return (dest);
 }
 
-/*int	main(void)
+/*
+int	main(void)
 {
 		char dest[] = "ola";
 		char src[] = "boas";
@@ -51,4 +49,5 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 		printf("%s\n", dest);
 		char *test = ft_memmove(dest, src, n);
 		printf("%s\n", test);
-}*/
+}
+*/

@@ -34,7 +34,8 @@ size_t	ft_strlcat(char *dest, char *src, size_t size)
 	return (d_len + s_len);
 }
 
-/*int main(void)
+/*
+int main(void)
 {
 		char dest[] = "bons";
 		char src[] = "dia";
@@ -45,4 +46,5 @@ size_t	ft_strlcat(char *dest, char *src, size_t size)
 		printf("dst: %s\n", dest);
 		printf("src: %s\n\n\n", src);
 		printf("Resultado: %d\n", test);
-}*/
+}
+*/

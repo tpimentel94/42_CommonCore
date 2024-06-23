@@ -1,45 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tlopes-p <tlopes-p@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/23 23:58:47 by tlopes-p          #+#    #+#             */
-/*   Updated: 2024/06/23 23:58:47 by tlopes-p         ###   ########.fr       */
+/*   Created: 2024/06/24 00:26:20 by tlopes-p          #+#    #+#             */
+/*   Updated: 2024/06/24 00:26:20 by tlopes-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s)
+void	ft_putstr_fd(char *s, int fd)
 {
-	char	*str;
-	int		i;
-	int		len;
+	int	i;
 
 	i = 0;
-	len = ft_strlen(s);
-	str = malloc((len + 1) * sizeof(char));
-	if (!s || !str)
-		return (NULL);
-	while (s[i])
+	while (s[i] != '\0')
 	{
-		str[i] = s[i];
+		write(fd, &s[i], 1);
 		i++;
 	}
-	str[i] = '\0';
-	return (str);
 }
 
 /*
-int	main(void)
+int main(void)
 {
-	char s1[] = "ola bom dia";
-	char *s2;
-
-		printf("%s\n", s1);
-	s2 = ft_strdup(s1);
-	printf("%s\n", s2);
+	ft_putstr_fd("teste\n", 1);
+	ft_putstr_fd("42\n", 1);
 }
 */
