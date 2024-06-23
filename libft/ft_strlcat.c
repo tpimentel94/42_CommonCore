@@ -12,36 +12,37 @@
 
 #include "libft.h"
 
-unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
+size_t	ft_strlcat(char *dest, char *src, size_t size)
 {
-	unsigned int	i;
-	int				j;
+	size_t	d_len;
+	size_t	s_len;
+	size_t	i;
 
 	i = 0;
-	while (dest[i] != '\0' && i < size)
+	d_len = ft_strlen(dest);
+	s_len = ft_strlen(src);
+	if (size <= d_len)
 	{
+		return (size + s_len);
+	}
+	while (src[i] && (i + d_len < size - 1))
+	{
+		dest[d_len + i] = src[i];
 		i++;
 	}
-	j = 0;
-	while (src[j] != '\0')
-	{
-		dest[i] = src[j];
-		i++;
-		j++;
-	}
-	dest[i] = '\0';
-	return (i);
+	dest[d_len + i] = '\0';
+	return (d_len + s_len);
 }
-/*
-int	main(void)
+
+/*int main(void)
 {
-	char str1[] = "Hello";
-	char str2[] = "Hello";
+		char dest[] = "bons";
+		char src[] = "dia";
 
-	printf("Sending str1 : %s, and str2 : %s \n" , str1 , str2);
-	int res = strlcat(str1 , str2 , 3);
-
-	printf(" Result str1 : %s, len : %d and str2 : %s\n" , str1 , res, str2);
-
-}
-*/
+		printf("dst: %s\n", dest);
+		printf("src: %s\n\n\n", src);
+		int test = ft_strlcat(dest, src, 3);
+		printf("dst: %s\n", dest);
+		printf("src: %s\n\n\n", src);
+		printf("Resultado: %d\n", test);
+}*/

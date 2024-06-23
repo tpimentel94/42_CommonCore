@@ -10,3 +10,35 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
+// finds the first occurrence of c in str and returns str from there
+// NULL if it doesnt find
+
+char    *ft_strchr(const char *str, int c)
+{
+	int	i;
+
+	i = 0;
+	while (str[i])
+	{
+		if (str[i] == (char)c)
+			return ((char *)(str + i));
+		i++;
+	}
+	if (!((char)c))
+		return ((char *)(str + i));
+	return (NULL);
+}
+
+int main(void)
+{
+		char str[] = "bom dia";
+		int c = ' ';
+
+		char *test = ft_strchr(str, c);
+		char *test2 = strchr(str, c);
+
+		printf("%s ok \n", test);
+		printf("%s ok \n", test2);
+}

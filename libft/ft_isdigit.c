@@ -12,36 +12,20 @@
 
 #include "libft.h"
 
-int	ft_isdigit(char *str)
+int	ft_isdigit(int c)
 {
-	int	i;
-
-	i = 0;
-	if (!*str)
-	{
-		return (1);
-	}
-	while (str[i] != '\0')
-	{
-		if (str[i] >= '0' && str[i] <= '9')
-		{
-			i++;
-		}
-		else
-		{
-			return (0);
-		}
-	}
-	return (1);
+	if (c >= '0' && c <= '9')
+			return (1);
+	return (0);
 }
 /*
 int	main(void)
 {
 	int	n, y;
 
-	n = ft_isdigit("12fdsdsf");
+	n = ft_isdigit("s");
 	
-	y = ft_isdigit("1234");
+	y = ft_isdigit("1");
 	
 	printf("Negative test: %d\n", n);
 	printf("Positive test: %d\n", y);
