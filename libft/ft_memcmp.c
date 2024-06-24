@@ -12,10 +12,6 @@
 
 #include "libft.h"
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 2ddc28b55bebb20c682fdb47f99b3782b955f5a3
 int ft_memcmp(const void *s1, const void *s2, size_t n)
 {
     size_t  i;

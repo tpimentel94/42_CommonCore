@@ -12,8 +12,6 @@
 
 #include "libft.h"
 
-// copies a new string with the set parameter removed from s1
-
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t	i;

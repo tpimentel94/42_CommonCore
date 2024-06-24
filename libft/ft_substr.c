@@ -12,13 +12,6 @@
 
 #include "libft.h"
 
-// to create a substring starting in start with lenght len
-// if start is bigger than the string,
-// we need to return an empty string
-// if parameter len is bigger than s + start,
-// in order to dont waste space we can reduce it
-// to only the necessary
-
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*little;

@@ -12,10 +12,6 @@
 
 #include "libft.h"
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 2ddc28b55bebb20c682fdb47f99b3782b955f5a3
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	size_t	len1;
