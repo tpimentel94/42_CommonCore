@@ -12,9 +12,6 @@
 
 #include "libft.h"
 
-// locates the little string inside the big string,
-//during the first len characters
-
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	size_t	i;
@@ -41,11 +38,13 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	return (0);
 }
 
-/*int main (void)
+/*
+int main (void)
 {
 		char big[] = "hello world";
 		char little [] = "ola";
 		size_t len = 10;
 
 		printf("%s\n", ft_strnstr(big, little, len));
-}*/
+}
+*/

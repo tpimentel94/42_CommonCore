@@ -12,8 +12,6 @@
 
 #include "libft.h"
 
-// finds the first occurence of c, starting in the end of the string.
-
 char	*ft_strrchr(const char *str, int c)
 {
 	int	i;
@@ -30,6 +28,7 @@ char	*ft_strrchr(const char *str, int c)
 	return (0);
 }
 
+/*
 int	main(void)
 {
     const char str[] = "bom dmia";
@@ -38,3 +37,4 @@ int	main(void)
  	printf("%s\n", ft_strrchr(str, ch));
  	printf("%s\n", strrchr(str, ch));
 }
+*/

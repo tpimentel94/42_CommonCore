@@ -12,10 +12,7 @@
 
 #include "libft.h"
 
-// finds the first occurrence of c in str and returns str from there
-// NULL if it doesnt find
-
-char    *ft_strchr(const char *str, int c)
+char	*ft_strchr(const char *str, int c)
 {
 	int	i;
 
@@ -31,6 +28,7 @@ char    *ft_strchr(const char *str, int c)
 	return (NULL);
 }
 
+/*
 int main(void)
 {
 		char str[] = "bom dia";
@@ -42,3 +40,4 @@ int main(void)
 		printf("%s ok \n", test);
 		printf("%s ok \n", test2);
 }
+*/

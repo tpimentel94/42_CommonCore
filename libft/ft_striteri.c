@@ -1,45 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tlopes-p <tlopes-p@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/23 23:58:47 by tlopes-p          #+#    #+#             */
-/*   Updated: 2024/06/23 23:58:47 by tlopes-p         ###   ########.fr       */
+/*   Created: 2024/06/24 00:30:53 by tlopes-p          #+#    #+#             */
+/*   Updated: 2024/06/24 00:30:53 by tlopes-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s)
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	char	*str;
-	int		i;
-	int		len;
+	unsigned int	i;
 
 	i = 0;
-	len = ft_strlen(s);
-	str = malloc((len + 1) * sizeof(char));
-	if (!s || !str)
-		return (NULL);
 	while (s[i])
 	{
-		str[i] = s[i];
+		f(i, s + i);
 		i++;
 	}
-	str[i] = '\0';
-	return (str);
 }
 
 /*
+void my_function(unsigned int index, char *character)
+{
+	(void) index;
+	*character = *character + 1;
+}
+
 int	main(void)
 {
-	char s1[] = "ola bom dia";
-	char *s2;
+	char str[] = "Hello";
+	printf("Input string: %s\n", str);
 
-		printf("%s\n", s1);
-	s2 = ft_strdup(s1);
-	printf("%s\n", s2);
+	ft_striteri(str, &my_function);
+
+	printf("Result: %s\n", str);
 }
 */

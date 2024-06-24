@@ -12,8 +12,6 @@
 
 #include "libft.h"
 
-// compares de first n bytes of memory between str1 and str2
-
 int ft_memcmp(const void *s1, const void *s2, size_t n)
 {
     size_t  i;
@@ -29,10 +27,11 @@ int ft_memcmp(const void *s1, const void *s2, size_t n)
             return ((unsigned char)str1[i] - (unsigned char)str2[i]);
         i++;
     }
-    return(NULL);
+    return(0);
 }
 
-/*int main(void)
+/*
+int main(void)
 {
 		char s1[] = "ola";
 		char s2[] = "olA";
@@ -42,4 +41,5 @@ int ft_memcmp(const void *s1, const void *s2, size_t n)
 		int test2 = memcmp(s1, s2, n);
 		printf("%d\n", test);
 		printf("%d\n", test2);
-}*/
+}
+*/

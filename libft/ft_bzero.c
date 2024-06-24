@@ -24,7 +24,7 @@ void    ft_bzero(void *str, size_t n)
     }
 }
 
-
+/*
 int	main(void)
 {
 	char str[] = "Ola bom dia";
@@ -32,9 +32,9 @@ int	main(void)
 	ft_bzero(str, 3);
 	printf("%d%d%d", str[0], str[1], str[2]);
 	printf("%s\n", &str[3]);
-/*
+
 	bzero(str, 3);
 	printf("%d%d%d", str[0], str[1], str[2]);
 	printf("%s\n", &str[3]);
-    */
 }
+*/
