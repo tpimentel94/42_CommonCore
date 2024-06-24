@@ -6,7 +6,7 @@
 /*   By: tlopes-p <tlopes-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/16 20:04:51 by tlopes-p          #+#    #+#             */
-/*   Updated: 2024/05/22 17:59:19 by tlopes-p         ###   ########.fr       */
+/*   Updated: 2024/06/24 12:09:07 by tlopes-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include <string.h>
 # include <unistd.h>
 # include <string.h>
+# include <limits.h>
 
 //part 1 - libc functions
 int					ft_atoi(const char *str);
