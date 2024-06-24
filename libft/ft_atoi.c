@@ -15,11 +15,35 @@
 int	ft_atoi(const char *str)
 {
 	int	i;
+	int	num;
+	int	sign;
+
+	sign = 1;
+	num = 0;
+	i = 0;
+	while ((str[i] >= 9 && str[i] <= 13) || str[i] == 32)
+		i++;
+	if (str[i] == '+' || str[i] == '-')
+	{
+		if (str[i] == '-')
+			sign = sign * -1;
+		i++;
+	}
+	while (str[i] >= '0' && str[i] <= '9')
+	{
+		num = num * 10 + (str[i] - '0');
+		i++;
+	}
+	return (num * sign);
+}
+/*
+{
+	int	i;
 	int	s;
 	int	nb;
 
 	i = 0;
-	s = 0;
+	s = 1;
 	nb = 0;
 	while ((str[i] != '\0') && ((str[i] == '\f') || (str[i] == '\n')
 			|| (str[i] == '\r') || (str[i] == '\t')
@@ -28,7 +52,7 @@ int	ft_atoi(const char *str)
 	while (str[i] != '\0' && (str[i] == '-' || str[i] == '+'))
 	{
 		if (str[i] == '-')
-			s++;
+			s = -1;
 		i++;
 	}
 	while (str[i] != '\0' && str[i] >= '0' && str[i] <= '9')
@@ -36,11 +60,9 @@ int	ft_atoi(const char *str)
 		nb = nb * 10 + (str[i] - '0');
 		i++;
 	}
-	if (s % 2 != 0)
-		nb = nb * -1;
-	return (nb);
+	return (nb * s);
 }
-/*
+
 int	main(void)
 {
 	printf("%d\n", ft_atoi("\n\t\f   -+++2443ddas3"));
