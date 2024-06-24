@@ -12,6 +12,10 @@
 
 #include "libft.h"
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 2ddc28b55bebb20c682fdb47f99b3782b955f5a3
 static void	ft_freedup(char **array)
 {
 	int	i;
@@ -25,6 +29,10 @@ static void	ft_freedup(char **array)
 	free(array);
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 2ddc28b55bebb20c682fdb47f99b3782b955f5a3
 static int	ft_count_words(char const *s, char delimiter)
 {
 	int	words;

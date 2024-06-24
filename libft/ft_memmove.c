@@ -12,6 +12,10 @@
 
 #include "libft.h"
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 2ddc28b55bebb20c682fdb47f99b3782b955f5a3
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	size_t	i;
